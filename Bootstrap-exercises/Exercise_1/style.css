@@ -1,0 +1,115 @@
+:root{
+    --verde: #71E913;
+    --rojo: #F05324;
+    --fuccia: #EC78FE;
+    --naranja: #F59754;
+    --azul: #295DFE;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 15vh;
+    background-color: var(--verde);
+    margin-bottom: 5px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+
+.aside-left {
+    border: 1px dotted blue;
+    background-color: var(--rojo);
+    margin-right: 5px;
+}
+
+.aside-right {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.aside-right__nav {
+    background-color: var(--fuccia);
+    width: 100%;
+    height: 70px;
+    margin-bottom: 5px;
+}
+
+.aside-right__sub-sections {
+    height: 18rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 8px;
+}
+
+.sub-section {
+    background-color: var(--naranja);
+    width: 99%;
+    margin: 0 auto;
+}
+
+.aside-right__elements {
+    display: grid;
+    grid-template-columns: 180px 180px auto 180px 180px;
+    grid-gap: 10px;
+}
+
+.element {
+    background-color: var(--azul);
+    height: 10rem;
+}
+
+footer {
+    height: 8vh;
+    background-color: var(--verde);
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1110px) {
+    .aside-right__sub-sections {
+        grid-template-columns: 1fr;
+    }
+    .sub-section {
+        margin: 0 auto 5px auto;
+    }
+    .aside-right__elements {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aside-right__sub-sections {
+        grid-template-columns: 1fr;
+    }
+    .sub-section {
+        margin: 0 auto 5px auto;
+    }
+    .aside-right__elements {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aside-right__sub-sections {
+        grid-template-columns: 1fr;
+    }
+    .sub-section {
+        margin: 0 auto 5px auto;
+    }
+    .aside-right__elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section {
+        grid-template-columns: 1fr;
+    }
+    .aside-left {
+        width: 100%;
+        margin: 0 auto 5px auto;
+        height: 4rem;
+    }
+}
